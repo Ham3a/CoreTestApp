@@ -1,0 +1,20 @@
+﻿@page
+@model CoreTestApp.Pages.HelloWorldModel
+
+@{
+}
+
+<h2>Hello World</h2>
+
+<h3> The time on the server is @DateTime.Now</h3>
+
+<p>
+    Enter your name.
+</p>
+<div asp-validation-summary="All"></div>
+<form method="post">
+    <div>Name: <input asp-for="name" /></div>
+    <input type="submit" />
+</form>
+
+<div id="result">@this.Model.name</div>
